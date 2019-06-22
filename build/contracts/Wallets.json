@@ -1,0 +1,3339 @@
+{
+  "contractName": "Wallets",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "walletCount",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0x29b57c69"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "walletsList",
+      "outputs": [
+        {
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "name": "coinCount",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0x2c362463"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor",
+      "signature": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "coinCount",
+          "type": "uint256"
+        }
+      ],
+      "name": "WalletCreated",
+      "type": "event",
+      "signature": "0x233ef44ac65e8fae0b26a9cfb88ae9b08baff1e5254458d1ee0eb89c1c88e968"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "addCoins",
+      "type": "event",
+      "signature": "0x96de8af120696416cce45a84e210fc53f810618dc90b72494b777719d212190a"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "deductCoins",
+      "type": "event",
+      "signature": "0xecccad81fc3c199bd682b7a52122b6f0351d91e2d00597680fcfd86a5aa973ca"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "createWallet",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0x11ebbf24"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "addCoinsToWallet",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0x8d51fa75"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "deductCoinsFromWallet",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0x7156a23c"
+    }
+  ],
+  "bytecode": "0x60806040526000805534801561001457600080fd5b5061039d806100246000396000f3fe60806040526004361061006c5763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166311ebbf24811461007157806329b57c69146100885780632c362463146100af5780637156a23c146100f25780638d51fa7514610130575b600080fd5b34801561007d57600080fd5b5061008661015a565b005b34801561009457600080fd5b5061009d6101cd565b60408051918252519081900360200190f35b3480156100bb57600080fd5b506100d9600480360360208110156100d257600080fd5b50356101d3565b6040805192835260208301919091528051918290030190f35b3480156100fe57600080fd5b5061011c6004803603602081101561011557600080fd5b50356101ec565b604080519115158252519081900360200190f35b34801561013c57600080fd5b506100866004803603602081101561015357600080fd5b50356102a7565b6000805460019081018083556040805180820182528281526105dc60208083019182529386528484528286209151825551930192909255825482519081529081019290925280517f233ef44ac65e8fae0b26a9cfb88ae9b08baff1e5254458d1ee0eb89c1c88e9689281900390910190a1565b60005481565b6001602081905260009182526040909120805491015482565b60006101f661035a565b506040805180820182527fcc69885fda6bcc1a4ace058b4a62bf5e179ea78fd58a1ccd71c22cc9b688792f805482527fcc69885fda6bcc1a4ace058b4a62bf5e179ea78fd58a1ccd71c22cc9b688793080548690036020848101918252600160008190528082528551909455905190915583519182528101859052825191927f96de8af120696416cce45a84e210fc53f810618dc90b72494b777719d212190a92918290030190a150600192915050565b6102af61035a565b506040805180820182527fcc69885fda6bcc1a4ace058b4a62bf5e179ea78fd58a1ccd71c22cc9b688792f805482527fcc69885fda6bcc1a4ace058b4a62bf5e179ea78fd58a1ccd71c22cc9b6887930805485016020848101918252600160008190528082528551909455905190915583519182528101849052825191927f96de8af120696416cce45a84e210fc53f810618dc90b72494b777719d212190a92918290030190a15050565b60408051808201909152600080825260208201529056fea165627a7a72305820ba2d6e6ed1f21c6ab78b09c5d05e49c82921520f0ec1761d147322143efe3db10029",
+  "deployedBytecode": "0x60806040526004361061006c5763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166311ebbf24811461007157806329b57c69146100885780632c362463146100af5780637156a23c146100f25780638d51fa7514610130575b600080fd5b34801561007d57600080fd5b5061008661015a565b005b34801561009457600080fd5b5061009d6101cd565b60408051918252519081900360200190f35b3480156100bb57600080fd5b506100d9600480360360208110156100d257600080fd5b50356101d3565b6040805192835260208301919091528051918290030190f35b3480156100fe57600080fd5b5061011c6004803603602081101561011557600080fd5b50356101ec565b604080519115158252519081900360200190f35b34801561013c57600080fd5b506100866004803603602081101561015357600080fd5b50356102a7565b6000805460019081018083556040805180820182528281526105dc60208083019182529386528484528286209151825551930192909255825482519081529081019290925280517f233ef44ac65e8fae0b26a9cfb88ae9b08baff1e5254458d1ee0eb89c1c88e9689281900390910190a1565b60005481565b6001602081905260009182526040909120805491015482565b60006101f661035a565b506040805180820182527fcc69885fda6bcc1a4ace058b4a62bf5e179ea78fd58a1ccd71c22cc9b688792f805482527fcc69885fda6bcc1a4ace058b4a62bf5e179ea78fd58a1ccd71c22cc9b688793080548690036020848101918252600160008190528082528551909455905190915583519182528101859052825191927f96de8af120696416cce45a84e210fc53f810618dc90b72494b777719d212190a92918290030190a150600192915050565b6102af61035a565b506040805180820182527fcc69885fda6bcc1a4ace058b4a62bf5e179ea78fd58a1ccd71c22cc9b688792f805482527fcc69885fda6bcc1a4ace058b4a62bf5e179ea78fd58a1ccd71c22cc9b6887930805485016020848101918252600160008190528082528551909455905190915583519182528101849052825191927f96de8af120696416cce45a84e210fc53f810618dc90b72494b777719d212190a92918290030190a15050565b60408051808201909152600080825260208201529056fea165627a7a72305820ba2d6e6ed1f21c6ab78b09c5d05e49c82921520f0ec1761d147322143efe3db10029",
+  "sourceMap": "27:1155:4:-;;;79:1;53:27;;161:55;8:9:-1;5:2;;;30:1;27;20:12;5:2;161:55:4;27:1155;;;;;;",
+  "deployedSourceMap": "27:1155:4:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;496:169;;8:9:-1;5:2;;;30:1;27;20:12;5:2;496:169:4;;;;;;53:27;;8:9:-1;5:2;;;30:1;27;20:12;5:2;53:27:4;;;;;;;;;;;;;;;;;;;;224:42;;8:9:-1;5:2;;;30:1;27;20:12;5:2;224:42:4;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;224:42:4;;;;;;;;;;;;;;;;;;;;;;;;;;908:271;;8:9:-1;5:2;;;30:1;27;20:12;5:2;908:271:4;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;908:271:4;;;;;;;;;;;;;;;;;;;;;673:227;;8:9:-1;5:2;;;30:1;27;20:12;5:2;673:227:4;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;673:227:4;;;496:169;538:11;:13;;;;;;;;;589:24;;;;;;;;;;;608:4;589:24;;;;;;;562;;;;;;;;;:51;;;;;;;;;;;643:11;;629:28;;;;;;;;;;;;;;;;;;;;;;;;496:169::o;53:27::-;;;;:::o;224:42::-;;;;;;;;;;;;;;;;;;;;:::o;908:271::-;968:4;985:21;;:::i;:::-;-1:-1:-1;1009:14:4;985:38;;;;;;;1009:14;985:38;;;;;;;1054:26;;;1009:14;985:38;;;1034:46;;;1009:11;:14;1091;;;;;;:24;;;;;;;;;;1131:18;;;;;;;;;;;;985:38;;1131:18;;;;;;;;;-1:-1:-1;1167:4:4;;908:271;-1:-1:-1;;908:271:4:o;673:227::-;730:21;;:::i;:::-;-1:-1:-1;754:14:4;730:38;;;;;;;754:14;730:38;;;;;;;799:24;;754:14;730:38;;;779:44;;;754:11;:14;834;;;;;;:24;;;;;;;;;;874:18;;;;;;;;;;;;730:38;;874:18;;;;;;;;;673:227;;:::o;27:1155::-;;;;;;;;;;-1:-1:-1;27:1155:4;;;;;;;;:::o",
+  "source": "pragma solidity ^0.5.0;\r\n\r\ncontract Wallets {\r\n\r\n    uint public walletCount = 0;\r\n\r\n    struct Wallet{\r\n        uint id;\r\n        uint coinCount;\r\n    }\r\n\r\n    constructor() public{\r\n        //createWallet();\r\n    }\r\n\r\n    mapping(uint => Wallet) public walletsList;\r\n\r\n    event WalletCreated(\r\n        uint id,\r\n        uint coinCount\r\n    );\r\n\r\n    event addCoins(\r\n        uint id,\r\n        uint amount\r\n    );\r\n\r\n    event deductCoins(\r\n        uint id,\r\n        uint amount\r\n    );\r\n\r\n    function createWallet() public {\r\n        walletCount++;\r\n        walletsList[walletCount] = Wallet(walletCount,1500);\r\n        emit WalletCreated(walletCount,0);\r\n    }\r\n\r\n    function addCoinsToWallet(uint amount) public {\r\n        Wallet memory _wallet = walletsList[1];\r\n        _wallet.coinCount = _wallet.coinCount+amount;\r\n        walletsList[1] = _wallet;\r\n        emit addCoins(1,amount);\r\n    }\r\n\r\n    function deductCoinsFromWallet(uint amount) public returns (bool) {\r\n        Wallet memory _wallet = walletsList[1];\r\n        _wallet.coinCount = _wallet.coinCount - amount;\r\n        walletsList[1] = _wallet;\r\n        emit addCoins(1,amount);\r\n        return true;\r\n    }\r\n}",
+  "sourcePath": "D:/smallchains/contracts/Wallets.sol",
+  "ast": {
+    "absolutePath": "/D/smallchains/contracts/Wallets.sol",
+    "exportedSymbols": {
+      "Wallets": [
+        942
+      ]
+    },
+    "id": 943,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 818,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:4"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 942,
+        "linearizedBaseContracts": [
+          942
+        ],
+        "name": "Wallets",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 821,
+            "name": "walletCount",
+            "nodeType": "VariableDeclaration",
+            "scope": 942,
+            "src": "53:27:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 819,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "53:4:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30",
+              "id": 820,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "79:1:4",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Wallets.Wallet",
+            "id": 826,
+            "members": [
+              {
+                "constant": false,
+                "id": 823,
+                "name": "id",
+                "nodeType": "VariableDeclaration",
+                "scope": 826,
+                "src": "113:7:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 822,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "113:4:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 825,
+                "name": "coinCount",
+                "nodeType": "VariableDeclaration",
+                "scope": 826,
+                "src": "131:14:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 824,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "131:4:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Wallet",
+            "nodeType": "StructDefinition",
+            "scope": 942,
+            "src": "89:64:4",
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 829,
+              "nodeType": "Block",
+              "src": "181:35:4",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 830,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 827,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "172:2:4"
+            },
+            "returnParameters": {
+              "id": 828,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "181:0:4"
+            },
+            "scope": 942,
+            "src": "161:55:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 834,
+            "name": "walletsList",
+            "nodeType": "VariableDeclaration",
+            "scope": 942,
+            "src": "224:42:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Wallet_$826_storage_$",
+              "typeString": "mapping(uint256 => struct Wallets.Wallet)"
+            },
+            "typeName": {
+              "id": 833,
+              "keyType": {
+                "id": 831,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "232:4:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "224:23:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Wallet_$826_storage_$",
+                "typeString": "mapping(uint256 => struct Wallets.Wallet)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 832,
+                "name": "Wallet",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 826,
+                "src": "240:6:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Wallet_$826_storage_ptr",
+                  "typeString": "struct Wallets.Wallet"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 840,
+            "name": "WalletCreated",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 839,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 836,
+                  "indexed": false,
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 840,
+                  "src": "305:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 835,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "305:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 838,
+                  "indexed": false,
+                  "name": "coinCount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 840,
+                  "src": "323:14:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 837,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "323:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "294:50:4"
+            },
+            "src": "275:70:4"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 846,
+            "name": "addCoins",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 845,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 842,
+                  "indexed": false,
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 846,
+                  "src": "378:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 841,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "378:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 844,
+                  "indexed": false,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 846,
+                  "src": "396:11:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 843,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "396:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "367:47:4"
+            },
+            "src": "353:62:4"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 852,
+            "name": "deductCoins",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 851,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 848,
+                  "indexed": false,
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 852,
+                  "src": "451:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 847,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "451:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 850,
+                  "indexed": false,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 852,
+                  "src": "469:11:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 849,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "469:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "440:47:4"
+            },
+            "src": "423:65:4"
+          },
+          {
+            "body": {
+              "id": 872,
+              "nodeType": "Block",
+              "src": "527:138:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 856,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "538:13:4",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "id": 855,
+                      "name": "walletCount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 821,
+                      "src": "538:11:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 857,
+                  "nodeType": "ExpressionStatement",
+                  "src": "538:13:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 865,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 858,
+                        "name": "walletsList",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 834,
+                        "src": "562:11:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Wallet_$826_storage_$",
+                          "typeString": "mapping(uint256 => struct Wallets.Wallet storage ref)"
+                        }
+                      },
+                      "id": 860,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 859,
+                        "name": "walletCount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 821,
+                        "src": "574:11:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "562:24:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Wallet_$826_storage",
+                        "typeString": "struct Wallets.Wallet storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 862,
+                          "name": "walletCount",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 821,
+                          "src": "596:11:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "31353030",
+                          "id": 863,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "608:4:4",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_1500_by_1",
+                            "typeString": "int_const 1500"
+                          },
+                          "value": "1500"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          {
+                            "typeIdentifier": "t_rational_1500_by_1",
+                            "typeString": "int_const 1500"
+                          }
+                        ],
+                        "id": 861,
+                        "name": "Wallet",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 826,
+                        "src": "589:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_struct$_Wallet_$826_storage_ptr_$",
+                          "typeString": "type(struct Wallets.Wallet storage pointer)"
+                        }
+                      },
+                      "id": 864,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "structConstructorCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "589:24:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Wallet_$826_memory",
+                        "typeString": "struct Wallets.Wallet memory"
+                      }
+                    },
+                    "src": "562:51:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Wallet_$826_storage",
+                      "typeString": "struct Wallets.Wallet storage ref"
+                    }
+                  },
+                  "id": 866,
+                  "nodeType": "ExpressionStatement",
+                  "src": "562:51:4"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 868,
+                        "name": "walletCount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 821,
+                        "src": "643:11:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "30",
+                        "id": 869,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "655:1:4",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        },
+                        "value": "0"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        }
+                      ],
+                      "id": 867,
+                      "name": "WalletCreated",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 840,
+                      "src": "629:13:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256,uint256)"
+                      }
+                    },
+                    "id": 870,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "629:28:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 871,
+                  "nodeType": "EmitStatement",
+                  "src": "624:33:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 873,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createWallet",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 853,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "517:2:4"
+            },
+            "returnParameters": {
+              "id": 854,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "527:0:4"
+            },
+            "scope": 942,
+            "src": "496:169:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 904,
+              "nodeType": "Block",
+              "src": "719:181:4",
+              "statements": [
+                {
+                  "assignments": [
+                    879
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 879,
+                      "name": "_wallet",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 904,
+                      "src": "730:21:4",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Wallet_$826_memory_ptr",
+                        "typeString": "struct Wallets.Wallet"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 878,
+                        "name": "Wallet",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 826,
+                        "src": "730:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Wallet_$826_storage_ptr",
+                          "typeString": "struct Wallets.Wallet"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 883,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 880,
+                      "name": "walletsList",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 834,
+                      "src": "754:11:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Wallet_$826_storage_$",
+                        "typeString": "mapping(uint256 => struct Wallets.Wallet storage ref)"
+                      }
+                    },
+                    "id": 882,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 881,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "766:1:4",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "754:14:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Wallet_$826_storage",
+                      "typeString": "struct Wallets.Wallet storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "730:38:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 891,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 884,
+                        "name": "_wallet",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 879,
+                        "src": "779:7:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Wallet_$826_memory_ptr",
+                          "typeString": "struct Wallets.Wallet memory"
+                        }
+                      },
+                      "id": 886,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "coinCount",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 825,
+                      "src": "779:17:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 890,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 887,
+                          "name": "_wallet",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 879,
+                          "src": "799:7:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Wallet_$826_memory_ptr",
+                            "typeString": "struct Wallets.Wallet memory"
+                          }
+                        },
+                        "id": 888,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "coinCount",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 825,
+                        "src": "799:17:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "+",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "id": 889,
+                        "name": "amount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 875,
+                        "src": "817:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "src": "799:24:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "779:44:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 892,
+                  "nodeType": "ExpressionStatement",
+                  "src": "779:44:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 897,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 893,
+                        "name": "walletsList",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 834,
+                        "src": "834:11:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Wallet_$826_storage_$",
+                          "typeString": "mapping(uint256 => struct Wallets.Wallet storage ref)"
+                        }
+                      },
+                      "id": 895,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "31",
+                        "id": 894,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "846:1:4",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_1_by_1",
+                          "typeString": "int_const 1"
+                        },
+                        "value": "1"
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "834:14:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Wallet_$826_storage",
+                        "typeString": "struct Wallets.Wallet storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 896,
+                      "name": "_wallet",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 879,
+                      "src": "851:7:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Wallet_$826_memory_ptr",
+                        "typeString": "struct Wallets.Wallet memory"
+                      }
+                    },
+                    "src": "834:24:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Wallet_$826_storage",
+                      "typeString": "struct Wallets.Wallet storage ref"
+                    }
+                  },
+                  "id": 898,
+                  "nodeType": "ExpressionStatement",
+                  "src": "834:24:4"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "31",
+                        "id": 900,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "883:1:4",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_1_by_1",
+                          "typeString": "int_const 1"
+                        },
+                        "value": "1"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 901,
+                        "name": "amount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 875,
+                        "src": "885:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_rational_1_by_1",
+                          "typeString": "int_const 1"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 899,
+                      "name": "addCoins",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 846,
+                      "src": "874:8:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256,uint256)"
+                      }
+                    },
+                    "id": 902,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "874:18:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 903,
+                  "nodeType": "EmitStatement",
+                  "src": "869:23:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 905,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addCoinsToWallet",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 876,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 875,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 905,
+                  "src": "699:11:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 874,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "699:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "698:13:4"
+            },
+            "returnParameters": {
+              "id": 877,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "719:0:4"
+            },
+            "scope": 942,
+            "src": "673:227:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 940,
+              "nodeType": "Block",
+              "src": "974:205:4",
+              "statements": [
+                {
+                  "assignments": [
+                    913
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 913,
+                      "name": "_wallet",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 940,
+                      "src": "985:21:4",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Wallet_$826_memory_ptr",
+                        "typeString": "struct Wallets.Wallet"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 912,
+                        "name": "Wallet",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 826,
+                        "src": "985:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Wallet_$826_storage_ptr",
+                          "typeString": "struct Wallets.Wallet"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 917,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 914,
+                      "name": "walletsList",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 834,
+                      "src": "1009:11:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Wallet_$826_storage_$",
+                        "typeString": "mapping(uint256 => struct Wallets.Wallet storage ref)"
+                      }
+                    },
+                    "id": 916,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 915,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1021:1:4",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1009:14:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Wallet_$826_storage",
+                      "typeString": "struct Wallets.Wallet storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "985:38:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 925,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 918,
+                        "name": "_wallet",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 913,
+                        "src": "1034:7:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Wallet_$826_memory_ptr",
+                          "typeString": "struct Wallets.Wallet memory"
+                        }
+                      },
+                      "id": 920,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "coinCount",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 825,
+                      "src": "1034:17:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 924,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 921,
+                          "name": "_wallet",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 913,
+                          "src": "1054:7:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Wallet_$826_memory_ptr",
+                            "typeString": "struct Wallets.Wallet memory"
+                          }
+                        },
+                        "id": 922,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "coinCount",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 825,
+                        "src": "1054:17:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "-",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "id": 923,
+                        "name": "amount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 907,
+                        "src": "1074:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "src": "1054:26:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1034:46:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 926,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1034:46:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 931,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 927,
+                        "name": "walletsList",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 834,
+                        "src": "1091:11:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Wallet_$826_storage_$",
+                          "typeString": "mapping(uint256 => struct Wallets.Wallet storage ref)"
+                        }
+                      },
+                      "id": 929,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "31",
+                        "id": 928,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1103:1:4",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_1_by_1",
+                          "typeString": "int_const 1"
+                        },
+                        "value": "1"
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1091:14:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Wallet_$826_storage",
+                        "typeString": "struct Wallets.Wallet storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 930,
+                      "name": "_wallet",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 913,
+                      "src": "1108:7:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Wallet_$826_memory_ptr",
+                        "typeString": "struct Wallets.Wallet memory"
+                      }
+                    },
+                    "src": "1091:24:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Wallet_$826_storage",
+                      "typeString": "struct Wallets.Wallet storage ref"
+                    }
+                  },
+                  "id": 932,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1091:24:4"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "31",
+                        "id": 934,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1140:1:4",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_1_by_1",
+                          "typeString": "int_const 1"
+                        },
+                        "value": "1"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 935,
+                        "name": "amount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 907,
+                        "src": "1142:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_rational_1_by_1",
+                          "typeString": "int_const 1"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 933,
+                      "name": "addCoins",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 846,
+                      "src": "1131:8:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256,uint256)"
+                      }
+                    },
+                    "id": 936,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1131:18:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 937,
+                  "nodeType": "EmitStatement",
+                  "src": "1126:23:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 938,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "1167:4:4",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 911,
+                  "id": 939,
+                  "nodeType": "Return",
+                  "src": "1160:11:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 941,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deductCoinsFromWallet",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 908,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 907,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 941,
+                  "src": "939:11:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 906,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "939:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "938:13:4"
+            },
+            "returnParameters": {
+              "id": 911,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 910,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 941,
+                  "src": "968:4:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 909,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "968:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "967:6:4"
+            },
+            "scope": 942,
+            "src": "908:271:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 943,
+        "src": "27:1155:4"
+      }
+    ],
+    "src": "0:1182:4"
+  },
+  "legacyAST": {
+    "absolutePath": "/D/smallchains/contracts/Wallets.sol",
+    "exportedSymbols": {
+      "Wallets": [
+        942
+      ]
+    },
+    "id": 943,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 818,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:4"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 942,
+        "linearizedBaseContracts": [
+          942
+        ],
+        "name": "Wallets",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 821,
+            "name": "walletCount",
+            "nodeType": "VariableDeclaration",
+            "scope": 942,
+            "src": "53:27:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 819,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "53:4:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30",
+              "id": 820,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "79:1:4",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Wallets.Wallet",
+            "id": 826,
+            "members": [
+              {
+                "constant": false,
+                "id": 823,
+                "name": "id",
+                "nodeType": "VariableDeclaration",
+                "scope": 826,
+                "src": "113:7:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 822,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "113:4:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 825,
+                "name": "coinCount",
+                "nodeType": "VariableDeclaration",
+                "scope": 826,
+                "src": "131:14:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 824,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "131:4:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Wallet",
+            "nodeType": "StructDefinition",
+            "scope": 942,
+            "src": "89:64:4",
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 829,
+              "nodeType": "Block",
+              "src": "181:35:4",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 830,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 827,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "172:2:4"
+            },
+            "returnParameters": {
+              "id": 828,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "181:0:4"
+            },
+            "scope": 942,
+            "src": "161:55:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 834,
+            "name": "walletsList",
+            "nodeType": "VariableDeclaration",
+            "scope": 942,
+            "src": "224:42:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Wallet_$826_storage_$",
+              "typeString": "mapping(uint256 => struct Wallets.Wallet)"
+            },
+            "typeName": {
+              "id": 833,
+              "keyType": {
+                "id": 831,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "232:4:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "224:23:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Wallet_$826_storage_$",
+                "typeString": "mapping(uint256 => struct Wallets.Wallet)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 832,
+                "name": "Wallet",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 826,
+                "src": "240:6:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Wallet_$826_storage_ptr",
+                  "typeString": "struct Wallets.Wallet"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 840,
+            "name": "WalletCreated",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 839,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 836,
+                  "indexed": false,
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 840,
+                  "src": "305:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 835,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "305:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 838,
+                  "indexed": false,
+                  "name": "coinCount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 840,
+                  "src": "323:14:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 837,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "323:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "294:50:4"
+            },
+            "src": "275:70:4"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 846,
+            "name": "addCoins",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 845,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 842,
+                  "indexed": false,
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 846,
+                  "src": "378:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 841,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "378:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 844,
+                  "indexed": false,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 846,
+                  "src": "396:11:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 843,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "396:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "367:47:4"
+            },
+            "src": "353:62:4"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 852,
+            "name": "deductCoins",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 851,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 848,
+                  "indexed": false,
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 852,
+                  "src": "451:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 847,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "451:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 850,
+                  "indexed": false,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 852,
+                  "src": "469:11:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 849,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "469:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "440:47:4"
+            },
+            "src": "423:65:4"
+          },
+          {
+            "body": {
+              "id": 872,
+              "nodeType": "Block",
+              "src": "527:138:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 856,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "538:13:4",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "id": 855,
+                      "name": "walletCount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 821,
+                      "src": "538:11:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 857,
+                  "nodeType": "ExpressionStatement",
+                  "src": "538:13:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 865,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 858,
+                        "name": "walletsList",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 834,
+                        "src": "562:11:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Wallet_$826_storage_$",
+                          "typeString": "mapping(uint256 => struct Wallets.Wallet storage ref)"
+                        }
+                      },
+                      "id": 860,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 859,
+                        "name": "walletCount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 821,
+                        "src": "574:11:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "562:24:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Wallet_$826_storage",
+                        "typeString": "struct Wallets.Wallet storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 862,
+                          "name": "walletCount",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 821,
+                          "src": "596:11:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "31353030",
+                          "id": 863,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "608:4:4",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_1500_by_1",
+                            "typeString": "int_const 1500"
+                          },
+                          "value": "1500"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          {
+                            "typeIdentifier": "t_rational_1500_by_1",
+                            "typeString": "int_const 1500"
+                          }
+                        ],
+                        "id": 861,
+                        "name": "Wallet",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 826,
+                        "src": "589:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_struct$_Wallet_$826_storage_ptr_$",
+                          "typeString": "type(struct Wallets.Wallet storage pointer)"
+                        }
+                      },
+                      "id": 864,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "structConstructorCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "589:24:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Wallet_$826_memory",
+                        "typeString": "struct Wallets.Wallet memory"
+                      }
+                    },
+                    "src": "562:51:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Wallet_$826_storage",
+                      "typeString": "struct Wallets.Wallet storage ref"
+                    }
+                  },
+                  "id": 866,
+                  "nodeType": "ExpressionStatement",
+                  "src": "562:51:4"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 868,
+                        "name": "walletCount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 821,
+                        "src": "643:11:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "30",
+                        "id": 869,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "655:1:4",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        },
+                        "value": "0"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        }
+                      ],
+                      "id": 867,
+                      "name": "WalletCreated",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 840,
+                      "src": "629:13:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256,uint256)"
+                      }
+                    },
+                    "id": 870,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "629:28:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 871,
+                  "nodeType": "EmitStatement",
+                  "src": "624:33:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 873,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createWallet",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 853,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "517:2:4"
+            },
+            "returnParameters": {
+              "id": 854,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "527:0:4"
+            },
+            "scope": 942,
+            "src": "496:169:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 904,
+              "nodeType": "Block",
+              "src": "719:181:4",
+              "statements": [
+                {
+                  "assignments": [
+                    879
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 879,
+                      "name": "_wallet",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 904,
+                      "src": "730:21:4",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Wallet_$826_memory_ptr",
+                        "typeString": "struct Wallets.Wallet"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 878,
+                        "name": "Wallet",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 826,
+                        "src": "730:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Wallet_$826_storage_ptr",
+                          "typeString": "struct Wallets.Wallet"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 883,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 880,
+                      "name": "walletsList",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 834,
+                      "src": "754:11:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Wallet_$826_storage_$",
+                        "typeString": "mapping(uint256 => struct Wallets.Wallet storage ref)"
+                      }
+                    },
+                    "id": 882,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 881,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "766:1:4",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "754:14:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Wallet_$826_storage",
+                      "typeString": "struct Wallets.Wallet storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "730:38:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 891,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 884,
+                        "name": "_wallet",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 879,
+                        "src": "779:7:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Wallet_$826_memory_ptr",
+                          "typeString": "struct Wallets.Wallet memory"
+                        }
+                      },
+                      "id": 886,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "coinCount",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 825,
+                      "src": "779:17:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 890,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 887,
+                          "name": "_wallet",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 879,
+                          "src": "799:7:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Wallet_$826_memory_ptr",
+                            "typeString": "struct Wallets.Wallet memory"
+                          }
+                        },
+                        "id": 888,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "coinCount",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 825,
+                        "src": "799:17:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "+",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "id": 889,
+                        "name": "amount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 875,
+                        "src": "817:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "src": "799:24:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "779:44:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 892,
+                  "nodeType": "ExpressionStatement",
+                  "src": "779:44:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 897,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 893,
+                        "name": "walletsList",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 834,
+                        "src": "834:11:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Wallet_$826_storage_$",
+                          "typeString": "mapping(uint256 => struct Wallets.Wallet storage ref)"
+                        }
+                      },
+                      "id": 895,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "31",
+                        "id": 894,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "846:1:4",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_1_by_1",
+                          "typeString": "int_const 1"
+                        },
+                        "value": "1"
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "834:14:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Wallet_$826_storage",
+                        "typeString": "struct Wallets.Wallet storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 896,
+                      "name": "_wallet",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 879,
+                      "src": "851:7:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Wallet_$826_memory_ptr",
+                        "typeString": "struct Wallets.Wallet memory"
+                      }
+                    },
+                    "src": "834:24:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Wallet_$826_storage",
+                      "typeString": "struct Wallets.Wallet storage ref"
+                    }
+                  },
+                  "id": 898,
+                  "nodeType": "ExpressionStatement",
+                  "src": "834:24:4"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "31",
+                        "id": 900,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "883:1:4",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_1_by_1",
+                          "typeString": "int_const 1"
+                        },
+                        "value": "1"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 901,
+                        "name": "amount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 875,
+                        "src": "885:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_rational_1_by_1",
+                          "typeString": "int_const 1"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 899,
+                      "name": "addCoins",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 846,
+                      "src": "874:8:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256,uint256)"
+                      }
+                    },
+                    "id": 902,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "874:18:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 903,
+                  "nodeType": "EmitStatement",
+                  "src": "869:23:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 905,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addCoinsToWallet",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 876,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 875,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 905,
+                  "src": "699:11:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 874,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "699:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "698:13:4"
+            },
+            "returnParameters": {
+              "id": 877,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "719:0:4"
+            },
+            "scope": 942,
+            "src": "673:227:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 940,
+              "nodeType": "Block",
+              "src": "974:205:4",
+              "statements": [
+                {
+                  "assignments": [
+                    913
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 913,
+                      "name": "_wallet",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 940,
+                      "src": "985:21:4",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Wallet_$826_memory_ptr",
+                        "typeString": "struct Wallets.Wallet"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 912,
+                        "name": "Wallet",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 826,
+                        "src": "985:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Wallet_$826_storage_ptr",
+                          "typeString": "struct Wallets.Wallet"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 917,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 914,
+                      "name": "walletsList",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 834,
+                      "src": "1009:11:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Wallet_$826_storage_$",
+                        "typeString": "mapping(uint256 => struct Wallets.Wallet storage ref)"
+                      }
+                    },
+                    "id": 916,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 915,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1021:1:4",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1009:14:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Wallet_$826_storage",
+                      "typeString": "struct Wallets.Wallet storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "985:38:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 925,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 918,
+                        "name": "_wallet",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 913,
+                        "src": "1034:7:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Wallet_$826_memory_ptr",
+                          "typeString": "struct Wallets.Wallet memory"
+                        }
+                      },
+                      "id": 920,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "coinCount",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 825,
+                      "src": "1034:17:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 924,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 921,
+                          "name": "_wallet",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 913,
+                          "src": "1054:7:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Wallet_$826_memory_ptr",
+                            "typeString": "struct Wallets.Wallet memory"
+                          }
+                        },
+                        "id": 922,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "coinCount",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 825,
+                        "src": "1054:17:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "-",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "id": 923,
+                        "name": "amount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 907,
+                        "src": "1074:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "src": "1054:26:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1034:46:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 926,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1034:46:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 931,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 927,
+                        "name": "walletsList",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 834,
+                        "src": "1091:11:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Wallet_$826_storage_$",
+                          "typeString": "mapping(uint256 => struct Wallets.Wallet storage ref)"
+                        }
+                      },
+                      "id": 929,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "31",
+                        "id": 928,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1103:1:4",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_1_by_1",
+                          "typeString": "int_const 1"
+                        },
+                        "value": "1"
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1091:14:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Wallet_$826_storage",
+                        "typeString": "struct Wallets.Wallet storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 930,
+                      "name": "_wallet",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 913,
+                      "src": "1108:7:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Wallet_$826_memory_ptr",
+                        "typeString": "struct Wallets.Wallet memory"
+                      }
+                    },
+                    "src": "1091:24:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Wallet_$826_storage",
+                      "typeString": "struct Wallets.Wallet storage ref"
+                    }
+                  },
+                  "id": 932,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1091:24:4"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "31",
+                        "id": 934,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1140:1:4",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_1_by_1",
+                          "typeString": "int_const 1"
+                        },
+                        "value": "1"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 935,
+                        "name": "amount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 907,
+                        "src": "1142:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_rational_1_by_1",
+                          "typeString": "int_const 1"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 933,
+                      "name": "addCoins",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 846,
+                      "src": "1131:8:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256,uint256)"
+                      }
+                    },
+                    "id": 936,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1131:18:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 937,
+                  "nodeType": "EmitStatement",
+                  "src": "1126:23:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 938,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "1167:4:4",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 911,
+                  "id": 939,
+                  "nodeType": "Return",
+                  "src": "1160:11:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 941,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deductCoinsFromWallet",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 908,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 907,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 941,
+                  "src": "939:11:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 906,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "939:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "938:13:4"
+            },
+            "returnParameters": {
+              "id": 911,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 910,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 941,
+                  "src": "968:4:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 909,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "968:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "967:6:4"
+            },
+            "scope": 942,
+            "src": "908:271:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 943,
+        "src": "27:1155:4"
+      }
+    ],
+    "src": "0:1182:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {
+        "0x233ef44ac65e8fae0b26a9cfb88ae9b08baff1e5254458d1ee0eb89c1c88e968": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "coinCount",
+              "type": "uint256"
+            }
+          ],
+          "name": "WalletCreated",
+          "type": "event",
+          "signature": "0x233ef44ac65e8fae0b26a9cfb88ae9b08baff1e5254458d1ee0eb89c1c88e968"
+        }
+      },
+      "links": {},
+      "address": "0xC61a04a1f89A19175DFb841a3C432b0C2a3c4A5d",
+      "transactionHash": "0xf3e37f85d8426a6a426a09ab5e4371ba885e194acda3ff4ee3a40a06a9d3f581"
+    }
+  },
+  "schemaVersion": "3.0.1",
+  "updatedAt": "2019-06-20T00:29:34.188Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+    <head>
+        <title>|smallchains|</title>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="">
+		<link rel="icon" type="image/png" href="./images/icons/favicon.png"/>
+		<link rel="stylesheet" type="text/css" href="./vendorss/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="./fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="./fonts/themify/themify-icons.css">
+		<link rel="stylesheet" type="text/css" href="./fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+		<link rel="stylesheet" type="text/css" href="./fonts/elegant-font/html-css/style.css">
+		<link rel="stylesheet" type="text/css" href="./vendorss/animate/animate.css">
+		<link rel="stylesheet" type="text/css" href="./vendorss/css-hamburgers/hamburgers.min.css">
+		<link rel="stylesheet" type="text/css" href="./vendorss/animsition/css/animsition.min.css">
+		<link rel="stylesheet" type="text/css" href="./vendorss/select2/select2.min.css">
+		<link rel="stylesheet" type="text/css" href="./vendorss/daterangepicker/daterangepicker.css">
+		<link rel="stylesheet" type="text/css" href="./vendorss/slick/slick.css">
+		<link rel="stylesheet" type="text/css" href="./vendorss/lightbox2/css/lightbox.min.css">
+		<link rel="stylesheet" type="text/css" href="./css/util.css">
+        <link rel="stylesheet" type="text/css" href="./css/main.css">
+        <link rel="stylesheet" href="./css/nprogress2.css">
+        <link rel="stylesheet" href="./css/main2.css">
+        <script src="./js/jquery.min.js"></script>
+        <script src="./js/nprogress2.js"></script>
+        <script type="text/javascript">
+                    $(function(){
+                        NProgress.configure({
+                            template: $('#splash-template').html()
+                        });
+                        NProgress.start();
+                    });
+                    $(window).load(function(){
+                        NProgress.done();
+                    })
+        </script>
+        <script src="https://kit.fontawesome.com/fc1d44e3ca.js"></script>
+    </head>
+    <body>
+       <script type="text" id="splash-template">
+            <div id="fh5co-logo">
+                    <a href="index.html"><img src="./img/logo.png" width="100%" dis alt="connecting small things together..."></a>
+            </div>
+            <div class="splash card">
+                <div role="spinner">
+                    <div class="spinner-icon"></div>
+                </div>
+                <p class="lead" style="text-align:center">Client App loading...</p>
+                <div class="progress">
+                    <div class="mybar" role="bar">
+                    </div>
+                </div>
+            </div>
+       </script>
+        <div class="wrap_header_mobile">
+                <!-- Logo moblie -->
+                <a href="index.html" class="logo-mobile">
+                    <img src="./img/logo.png" alt="IMG-LOGO">
+                </a>
+    
+                <!-- Button show menu -->
+                <div class="btn-show-menu">
+                    <!-- Header Icon mobile -->
+                    <div class="header-icons-mobile">
+                        <a href="#" class="header-wrapicon1 dis-block">
+                            <img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
+                        </a>
+    
+                        <span class="linedivide2"></span>
+                    </div>
+    
+                    <div class="btn-show-menu-mobile hamburger hamburger--squeeze">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </div>
+                </div>
+        </div>
+        <div class="wrap-side-menu" >
+            <nav class="side-menu">
+                <ul class="main-menu">
+                    <li class="item-menu-mobile">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="item-menu-mobile">
+                        <a href="wallet.html">Create Wallet</a>
+                    </li>
+                    <li class="item-menu-mobile">
+                            <a href="coinsell.html">Coin Bank</a>
+                    </li>
+                    <li class="item-menu-mobile">
+                            <a href="vouchers.html">Vouchers</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div id="clientWalletBalanceValue" hidden></div>
+        <a href="#" class="button flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" style="width:60%; position: absolute;left:38%;"> 
+            <i class="fab fa-bitcoin fa-3x"></i> Coin Balance : <span class="remainWalletBalance" style="padding: 10px;"></span>
+        </a>
+        
+
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-50">
+                <!-- Block2 -->
+                <div class="block2" id="voucherList">
+                    <div class="voucherTemplate">
+                        <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
+                            <div class="voucherImgDisplay"></div>
+                            <div class="block2-overlay trans-0-4">
+                                <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+                                    <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+                                    <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+                                </a>
+                                <div class="block2-btn-addcart w-size1 trans-0-4">
+                                    <a href="#" class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4 voucherCost"></a>
+                                </div>
+                             </div>
+                        </div>
+                        <div class="block2-txt p-t-20">
+                            <a href="#" class="block2-name dis-block m-text6  p-b-5 voucherHeader"></a>
+                            <span class="block2-price s-text3 p-r-5 voucherContent"></span>
+                            <span class="block2-price s-text3 p-r-5 voucherRemCount"></span>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>   
+        
+        
+        <!-- Loading Scripts -->
+        <script type="text/javascript" src="./vendorss/jquery/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="./vendorss/animsition/js/animsition.min.js"></script>
+		<script type="text/javascript" src="./vendorss/bootstrap/js/popper.js"></script>
+		<script type="text/javascript" src="./vendorss/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="./vendorss/select2/select2.min.js"></script>
+		<script type="text/javascript">
+			$(".selection-1").select2({
+				minimumResultsForSearch: 20,
+				dropdownParent: $('#dropDownSelect1')
+			});
+		</script>
+		<script type="text/javascript" src="./vendorss/slick/slick.min.js"></script>
+		<script type="text/javascript" src="./js/slick-custom.js"></script>
+		<script type="text/javascript" src="./vendorss/countdowntime/countdowntime.js"></script>
+		<script type="text/javascript" src="./vendorss/lightbox2/js/lightbox.min.js"></script>
+		<script type="text/javascript" src="./vendorss/sweetalert/sweetalert.min.js"></script>
+		<script type="text/javascript">
+			$('.block2-btn-addcart').each(function(){
+				var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+				$(this).on('click', function(){
+					swal(nameProduct, "is added to cart !", "success");
+				});
+			});
+
+			$('.block2-btn-addwishlist').each(function(){
+				var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+				$(this).on('click', function(){
+					swal(nameProduct, "is added to wishlist !", "success");
+				});
+			});
+		</script>
+		<script type="text/javascript" src="./vendorss/parallax100/parallax100.js"></script>
+		<script type="text/javascript">
+	        $('.parallax100').parallax100();
+		</script>
+		<script src="./js/main.js"></script>
+        <!--End Loading Scripts-->
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!--Loading Smartcontract JS connect code-->
+        <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="vendor/truffle-contract/dist/truffle-contract.js"></script>
+        <script src="app.js"></script>
+        <script src="voucher.js"></script>
+        <script src="wallet.js"></script>
+    </body>
+</html>
